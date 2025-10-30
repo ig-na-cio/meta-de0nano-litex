@@ -9,6 +9,7 @@ MACHINE = "de0nano-litex"
 
 4. Agregar al final estas configuraciones:
 
+```
 # Sin nada extra
 EXTRA_IMAGEDEPENDS = ""
 
@@ -27,6 +28,7 @@ BAD_RECOMMENDATIONS = "*"
 
 # Sin locales
 IMAGE_LINGUAS = ""
+```
 
 5. Para construir:
 
