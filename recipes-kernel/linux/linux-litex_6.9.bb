@@ -8,7 +8,7 @@ inherit kernel
 
 LINUX_VERSION = "6.9"
 LINUX_VERSION_EXTENSION = "-litex"
-
+PV = "${LINUX_VERSION}+git${SRCPV}"
 SRCREV = "v6.9"
 SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git;branch=linux-6.9.y;protocol=https"
 
@@ -42,7 +42,16 @@ S = "${WORKDIR}/git"
 COMPATIBLE_MACHINE = "de0nano-litex"
 KERNEL_IMAGETYPE = "Image"
 
-# Copiar DTS al del kernel
+# De nuevo, forzamos las flags de compilacion
+KERNEL_CC:append = " -march=rv32ima -mabi=ilp32"
+KERNEL_LD:append = " -melf32lriscv"
+
+EXTRA_OEMAKE:append = " \
+    ARCH=riscv \
+    CROSS_COMPILE=${TARGET_PREFIX} \
+"
+
+# Copiar DTS al arbol del kernel
 do_configure:prepend() {
     mkdir -p ${S}/arch/riscv/boot/dts/litex
     cp ${WORKDIR}/de0nano.dts ${S}/arch/riscv/boot/dts/litex/
