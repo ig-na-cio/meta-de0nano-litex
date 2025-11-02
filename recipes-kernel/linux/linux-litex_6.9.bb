@@ -42,7 +42,7 @@ S = "${WORKDIR}/git"
 COMPATIBLE_MACHINE = "de0nano-litex"
 KERNEL_IMAGETYPE = "Image"
 
-# De nuevo, forzamos las flags de compilacion
+# De nuevo, forzamos las flags de compilación
 KERNEL_CC:append = " -march=rv32ima -mabi=ilp32"
 KERNEL_LD:append = " -melf32lriscv"
 

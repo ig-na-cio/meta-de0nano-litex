@@ -6,7 +6,7 @@ inherit core-image
 
 COMPATIBLE_MACHINE = "de0nano-litex"
 
-# SOLO busybox
+# SÓLO busybox
 IMAGE_INSTALL = "busybox"
 # PACKAGE_INSTALL = "busybox"
 
@@ -24,7 +24,7 @@ IMAGE_LINGUAS = ""
 IMAGE_ROOTFS_EXTRA_SPACE = "0"
 IMAGE_ROOTFS_MAXSIZE = "65536"
 
-# Sin recomendaciones automaticas
+# Sin recomendaciones automáticas
 BAD_RECOMMENDATIONS = "*"
 
 IMAGE_FEATURES:remove = "package-management"

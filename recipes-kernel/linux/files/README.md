@@ -1,0 +1,1 @@
+Patches, defconfig y device tree generados por Litex y linux-on-vexriscv-litex.
