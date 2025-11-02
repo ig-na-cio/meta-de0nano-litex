@@ -63,9 +63,14 @@ IMAGE_LINGUAS = ""
 
 5. Para construir:
 
-- Todo
+- Imagen completa
+
+``` Bash
 bitbake litex-minimal-image
+```
 
-- Solo kernel
+- Sólo kernel
+
+``` Bash
 bitbake litex-linux
-
+```
