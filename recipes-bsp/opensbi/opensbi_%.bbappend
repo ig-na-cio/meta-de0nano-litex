@@ -1,1 +1,0 @@
-COMPATIBLE_MACHINE:de0nano-litex = "invalid"

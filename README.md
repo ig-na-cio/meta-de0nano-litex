@@ -15,6 +15,8 @@ Layer para Yocto para soporte de la de0nano con SoC creado con `linux-on-litex-v
 
 - `recipes-core/linux/files/`: Archivos generados por Litex. Patches con drivers para Linux 6.9, defconfig y el device tree.
 
+- `recipes-example/led-demo/`: Archivos para imprimir un Hola Mundo y un patrón de leds en la plataforma y la receta para compilarlos.
+
 > NOTA: Se requiere de `meta-riscv`, y de aquellas que vienen con poky por defecto, para utilizar esta layer.
 
 ## Uso
